@@ -3,8 +3,35 @@
 <html>
 <head>
 	<title></title>
+	<style>
+		.clock{ 
+
+			width: 250px;
+			height: 250px;
+			border-radius: 20px;
+		}
+		body{
+			background-color: skyblue;
+		}
+		h1{	text-align: center;
+			color: white;
+		}
+		form{
+			padding: 10px;
+			border-radius: 20px;
+		}
+		input{
+			padding: 10px;
+			border-radius: 20px;
+		}
+	</style>
 </head>
 <body>
-<div>hello</div>
+<h1><b>click on the timer clock to start </b></h1>
+<img  class="clock" src="http://clock-desktop.com/screens/classic_clock/classic-clock-01.jpg" onclick="mycountdown()" align="middle">
+<form>
+ MINUTES<input type="number" name="min">
+ SECONDS<input type="number" name="min">
+</form>
 </body>
 </html>
