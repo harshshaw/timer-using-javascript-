@@ -3,6 +3,7 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/html" href="function.html">
 	<style>
 		.clock{ 
 
@@ -27,11 +28,14 @@
 	</style>
 </head>
 <body>
+	<div id="clock">
 <h1><b>click on the timer clock to start </b></h1>
-<img  class="clock" src="http://clock-desktop.com/screens/classic_clock/classic-clock-01.jpg" onclick="mycountdown()" align="middle">
+<img  class="clock" src="http://clock-desktop.com/screens/classic_clock/classic-clock-01.jpg" onclick="countdown()" align="middle">
 <form>
  MINUTES<input type="number" typer="button" name="min">
  SECONDS<input type="number" name="min">
+ <p id="msg"></p>
+</div>
 </form>
 </body>
 </html>

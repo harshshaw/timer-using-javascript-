@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	var min = 1;
+	var sec = min *60;
+	function countdown(){
+		setTimeout('decrement',60);
+	}
+	function decrement (){
+		minutes=document.getElementById('min');
+		seconds=document.getElementById('sec');
+
+		if(seconds<59){
+			seconds.value=secs;
+		}
+		else{
+			minutes.style.color='red';
+			seconds.style.color='red';
+			document.getElementById('msg').innerHTML="hurry up!";
+		}
+		if(min<0){
+			alert("timeout");
+			minutes.value='00';
+			seconds.value='00';
+			document.getElementById('msg').innerHTML="time's up." 
+		}
+		else
+		{
+			sec--;
+			setTimeout('decrement()',1000);
+		}
+	}
+	function getMinutes(){
+		mins=Math.floor(secs/60);
+		return mmins;
+	}
+	function getSeconds() {
+		return secs- Math.round(mins*60);
+	}
+
+
+</script>
+</body>
+</html>
