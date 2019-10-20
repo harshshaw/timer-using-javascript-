@@ -36,7 +36,7 @@
 			left: 50%;
 			transform: translate(-50%,-50%);
 		}
-		#btn{
+		.btn{
 			position: absolute;
 			top: 75%;
 			left: 50%;
@@ -46,44 +46,48 @@
 			background-color:skyblue ;
 			cursor: no-drop;
 		}
-		input{
-			border-radius: 35%;
-			border-color: blue;
-			border :none;
-			border-width: 3px;
-			background-color: skyblue;
-			width: 100px;
+		.btn2{
+			{
+			position: absolute;
+			top: 75%;
+			left: 40%;
+			transform: translate(-45%,-45%);
+			padding: 14px 12px;
+			border:none;
+			background-color:skyblue ;
+			cursor: no-drop;
+		}
 		}
 	</style>
 </head>
 <body>
 	<h3><i>PRESS START !</i></h3>
-	<form>
-		sec:<input type="number" id="input" name="input"><br>
-		<input type="submit" value="submit">	
-
-	</form>
-
-			<div class="container">
+	<div class="container">
 			<h1 class="timer" id="timer">something...</h1>
 	</div>	
 
-	<button class="btn" id="btn">wait</button>
+	<button class="btn2" onclick="clearInterval(x)">stop</button>
+	<button onclick="reset()">reset</button>
 	<button class="btn" onclick="set()" id="btn">start</button>
 
 </body>
 <script >
+	var x;
+	var time;
+	function reset(){
+		time=0;
+		return time;
+	}
 	function set(){
 
-	var time=10;
-	var x =setInterval(function(){
+	time= prompt("please enter time in secs");
+	 x =setInterval(function(){
 			document.getElementById("timer").innerHTML=" "+time+"sec";
 			time=time-1;
 
 		if (time<0) {
 			clearInterval(x);
-			document.getElementById('btn').innerHTML="get link";
-			document.getElementById('btn').style.backgroundcolor="#89da59";
+			document.getElementById('btn').style.backgroundcolor="black";
 			document.getElementById("btn").style.cursor="point";
 		}
 
